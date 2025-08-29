@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UPI History</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: white;
+      width: 360px;
+      margin: auto;
+    }
+    .container {
+      padding: 16px;
+      padding-bottom: 80px;
+    }
+    .header {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+    .search-bar {
+      background-color: #2c2c2c;
+      border-radius: 24px;
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .search-bar input {
+      flex: 1;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 14px;
+      outline: none;
+    }
+    .transaction {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 8px;
+    }
+    .transaction .left {
+      display: flex;
+      align-items: center;
+    }
+    .transaction-icon {
+      width: 40px;
+      height: 40px;
+      background-color: #2c2c2c;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+    }
+    .transaction-details {
+      font-size: 14px;
+    }
+    .transaction-details .label {
+      color: #888;
+      font-size: 12px;
+    }
+    .transaction-details .name, .transaction-details .date {
+      font-size: 14px;
+      margin-top: 2px;
+      cursor: pointer;
+    }
+    .transaction-details .date {
+      color: #888;
+      font-size: 12px;
+    }
+    .transaction .amount {
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer; /* added cursor pointer since now editable */
+    }
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      width: 360px;
+      display: flex;
+      justify-content: space-around;
+      background-color: #1e1e1e;
+      padding: 8px 0;
+      border-top: 1px solid #333;
+    }
+    .bottom-nav div {
+      text-align: center;
+      color: white;
+      font-size: 12px;
+    }
+    .bottom-nav i {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 2px;
+    }
+    .qr-button {
+      width: 50px;
+      height: 50px;
+      background-color: #a445f2;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+      margin-top: -25px;
+      box-shadow: 0 0 8px #a445f2;
+    }
+    .edit-input {
+      font-size: 14px;
+      padding: 2px;
+      width: 100%;
+      background-color: #1e1e1e;
+      color: white;
+      border: 1px solid #555;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">History</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search transactions" />
+    </div>
+
+    <!-- Editable Transaction: Firoj Alam -->
+    <div class="transaction">
+      <div class="left">
+        <div class="transaction-icon">↗</div>
+        <div class="transaction-details">
+          <div class="label">Paid to</div>
+          <div class="name" onclick="editText(this)">FIROJ ALAM</div>
+          <div class="date" onclick="editText(this)">07 May 2025</div>
+        </div>
+      </div>
+      <div class="amount" onclick="editText(this)">₹30</div>
+    </div>
+
+    <!-- Additional transactions -->
+    <div class="transaction">
+      <div class="left">
+        <div class="transaction-icon">↗</div>
+        <div class="transaction-details">
+          <div class="label">Paid to</div>
+          <div class="name">AMAN SAHU</div>
+          <div class="date">07 May 2025</div>
+        </div>
+      </div>
+      <div class="amount">₹10</div>
+    </div>
+
+    <div class="transaction">
+      <div class="left">
+        <div class="transaction-icon">↗</div>
+        <div class="transaction-details">
+          <div class="label">Paid to</div>
+          <div class="name">PRASHANT SAHU</div>
+          <div class="date">07 May 2025</div>
+        </div>
+      </div>
+      <div class="amount">₹26</div>
+    </div>
+
+    <div class="transaction">
+      <div class="left">
+        <div class="transaction-icon">↗</div>
+        <div class="transaction-details">
+          <div class="label">Paid to</div>
+          <div class="name">LAVKUSH SAHU</div>
+          <div class="date">07 May 2025</div>
+        </div>
+      </div>
+      <div class="amount">₹121</div>
+    </div>
+
+    <div class="transaction">
+      <div class="left">
+        <div class="transaction-icon">↗</div>
+        <div class="transaction-details">
+          <div class="label">Paid to</div>
+          <div class="name">RAHUL SAHU</div>
+          <div class="date">07 May 2025</div>
+        </div>
+      </div>
+      <div class="amount">₹45</div>
+    </div>
+
+    <div class="transaction">
+      <div class="left">
+        <div class="transaction-icon">↗</div>
+        <div class="transaction-details">
+          <div class="label">Paid to</div>
+          <div class="name">SURAJ SAHU</div>
+          <div class="date">07 May 2025</div>
+        </div>
+      </div>
+      <div class="amount">₹88</div>
+    </div>
+
+    <div class="transaction">
+      <div class="left">
+        <div class="transaction-icon">↗</div>
+        <div class="transaction-details">
+          <div class="label">Paid to</div>
+          <div class="name">MANOJ SAHU</div>
+          <div class="date">07 May 2025</div>
+        </div>
+      </div>
+      <div class="amount">₹60</div>
+    </div>
+
+    <div class="transaction">
+      <div class="left">
+        <div class="transaction-icon">↗</div>
+        <div class="transaction-details">
+          <div class="label">Paid to</div>
+          <div class="name">RAVI SAHU</div>
+          <div class="date">07 May 2025</div>
+        </div>
+      </div>
+      <div class="amount">₹35</div>
+    </div>
+
+  </div>
+
+  <div class="bottom-nav">
+    <div><i class="fas fa-home"></i>Home</div>
+    <div><i class="fas fa-search"></i>Search</div>
+    <div class="qr-button"><i class="fas fa-qrcode"></i></div>
+    <div><i class="fas fa-bell"></i>Alerts</div>
+    <div><i class="fas fa-clock"></i>History</div>
+  </div>
+
+  <script>
+    function editText(element) {
+      const currentText = element.textContent;
+      const isAmount = currentText.trim().startsWith("₹");
+      const value = isAmount ? currentText.replace("₹", "").trim() : currentText;
+
+      const input = document.createElement("input");
+      input.value = value;
+      input.className = "edit-input";
+
+      input.onblur = () => {
+        element.textContent = isAmount ? "₹" + input.value : input.value;
+        element.style.display = "block";
+      };
+
+      input.onkeydown = (e) => {
+        if (e.key === "Enter") {
+          input.blur();
+        }
+      };
+
+      element.textContent = "";
+      element.appendChild(input);
+      input.focus();
+    }
+  </script>
+</body>
+</html>
