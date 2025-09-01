@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UPI App UI Clone with Scanner</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- QR Scanner Library -->
+  <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container">
+    <div class="top-section">
+      <img src="https://media.istockphoto.com/id/2148975617/photo/woman-jumping-high-after-successful-job-interview.jpg?s=2048x2048&w=is&k=20&c=FrltdFNdmgY8ygA5XEN1vNNCxdVMrO6eru50P8Lv3Mg=" alt="Profile">
+      <div class="check-balance-icon" style="position: relative;">
+        <div class="help-icon">?</div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <div class="action">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png"/>
+        To Mobile Number
+      </div>
+      <div class="action">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/bank.png"/>
+        To Bank & Self A/c
+      </div>
+      <div class="action">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/megaphone.png"/>
+        Refer & Get Upto ₹200
+      </div>
+      <div class="action">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/money.png"/>
+        Check Balance
+      </div>
+    </div>
+
+    <div class="recharge-bills">
+      <h3>
+        Recharge & Bills
+        <span style="color: #b37feb">View All</span>
+      </h3>
+      <div class="bill-options">
+        <div class="bill-option">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/smartphone.png"/>
+          Recharge
+        </div>
+        <div class="bill-option">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/home.png"/>
+          Rent
+        </div>
+        <div class="bill-option">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/light-on.png"/>
+          Electricity
+        </div>
+        <div class="bill-option">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/money-bag.png"/>
+          Loan EMI
+        </div>
+      </div>
+    </div>
+
+    <div class="services">
+      <div class="service" style="display: flex; align-items: center; gap: 8px;">
+        <div>
+          <div style="margin-bottom: 5px;">Loans</div>
+          <div style="font-size: 12px; color: gray;">Personal, Gold and More</div>
+        </div>
+        <img src="./img/loan.png" style="width: 40px; height: 40px;" alt="Loans Icon"/>
+      </div>
+
+      <div class="service" style="display: flex; align-items: center; gap: 6px; padding: 4px;">
+        <div>
+          <div style="margin-bottom: 2px; font-size: 14px;">Insurance</div>
+          <div style="font-size: 9px; background-color: hsl(269, 87%, 50%); color: white; display: inline-block; padding: 1px 4px; border-radius: 3px;">Offer</div>
+        </div>
+        <img src="https://img.icons8.com/?size=100&id=1XbrcE6sMVqY&format=png&color=000000" style="width: 49px; height: 49px;" alt="Insurance Icon"/>
+      </div>
+
+      <div class="service" style="display: flex; align-items: center; gap: 8px;">
+        <div>
+          <div style="margin-bottom: 5px;">Savings</div>
+          <div style="font-size: 12px; color: gray;">Gold SIP, NPS</div>
+        </div>
+        <img src="./img/saving.png" style="width: 45px; height: 45px;" alt="Savings Icon"/>
+      </div>
+
+      <div class="service" style="display: flex; align-items: center; gap: 8px;">
+        <div>
+          <div style="margin-bottom: 4px;">Travel & Transit</div>
+          <div style="font-size: 12px; color: gray;">Flight, Train, Bus, Hotel, Metro</div>
+        </div>
+        <img src="https://img.icons8.com/color/48/airport.png" style="width: 40px; height: 40px;" alt="Travel Icon"/>
+      </div>
+
+      <div class="service" style="display: flex; align-items: center; gap: 8px;">
+        <div>
+          <div style="margin-bottom: 5px;">Mutual Funds</div>
+          <div style="font-size: 12px; color: gray;">SIPs & Investments</div>
+        </div>
+        <img src="https://img.icons8.com/color/48/combo-chart.png" style="width: 40px; height: 40px;" alt="Mutual Fund Icon"/>
+      </div>
+
+      <div class="service" style="display: flex; align-items: center; gap: 8px;">
+        <div>
+          <div>Rewards</div>
+          <div style="font-size: 12px; color: gray;">Offer & Cashback</div>
+          <div style="background-color: lab(39.17% 78.71 -90.6); color: white; font-size: 10px; padding: 2px 6px; border-radius: 6px; display: inline-block; margin-top: 4px;">
+            3 New
+          </div>
+        </div>
+        <img src="https://img.icons8.com/color/48/gift.png" style="width: 40px; height: 40px;" alt="Reward Icon"/>
+      </div>
+    </div>
+
+    <div class="card">
+      <div><strong>Loans</strong><p>Personal, Gold and More</p><span class="label">Instant</span></div>
+      <img src="https://img.icons8.com/color/96/cash-in-hand.png" />
+    </div>
+
+    <div class="card">
+      <div><strong>Travel & Transit</strong><p>Flight, Train, Bus, Hotel, Metro</p><span class="label">Sale</span></div>
+      <img src="https://img.icons8.com/color/96/airport.png" />
+    </div>
+
+    <div class="card">
+      <div><strong>Savings</strong><p>Gold SIP, NPS</p></div>
+      <img src="https://img.icons8.com/color/96/safe.png" />
+    </div>
+  </div>
+
+  <!-- Scanner Modal -->
+  <div id="scanner-modal">
+    <div id="reader"></div>
+    <button id="close-btn" onclick="closeScanner()">Close</button>
+    <button id="pay-btn" onclick="goToPayment()">Click</button>
+  </div>
+
+  <!-- Bottom Navigation -->
+  <div class="bottom-nav">
+    <div><i class="fas fa-home" onclick="goHome()"></i>Home</div>
+    <div><i class="fas fa-search"></i>Search</div>
+    <div class="qr-button" onclick="openScanner()"><i class="fas fa-qrcode"></i></div>
+    <div><i class="fas fa-bell"></i>Alerts</div>
+    <div><i class="fas fa-clock" onclick="window.location.href='history.html'"></i> History</div>
+  </div>
+
+  <!-- External JS -->
+  <script src="index.js"></script>
+</body>
+</html>

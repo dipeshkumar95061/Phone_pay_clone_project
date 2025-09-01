@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment Success</title>
+  <link rel="stylesheet" href="paymentdone.css">
+</head>
+<body>
+  <div class="container">
+    <main>
+      <div class="success-header">
+        <img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" alt="success" />
+        <h2>Payment Successful</h2>
+        <p id="timestamp"></p>
+      </div>
+
+      <div class="card">
+        <div class="user-info">
+          <div class="avatar" id="avatar">RD</div>
+          <div class="user-details">
+            <input type="text" id="nameInput" readonly onclick="goFullscreen()" />
+            <div class="upi-id" id="upiDisplay"></div>
+          </div>
+        </div>
+        <div class="amount-section">
+          <span>₹<span id="amountDisplay">0</span></span>
+          <span class="split">Split Expense</span>
+        </div>
+        <div class="divider"></div>
+        <div class="actions">
+          <div>
+            <div>☰</div>
+            <div>View Details</div>
+          </div>
+          <div>
+            <div>↪</div>
+            <div>Share Receipt</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="advertisement">
+        <img src="https://img.freepik.com/free-vector/tiny-people-analysts-evaluating-ability-prospective-debtor-pay-debt-credit-rating-credit-risk-control-credit-rating-agency-concept_107791-6385.jpg?w=740"
+             alt="Credit Score Illustration" />
+        <h3>Know Your Credit Score Today!</h3>
+        <p>Check now for FREE.</p>
+      </div>
+    </main>
+
+    <button class="done-button" onclick="handleDone()">Done</button>
+  </div>
+
+  <script src="paymentdone.js"></script>
+</body>
+</html>

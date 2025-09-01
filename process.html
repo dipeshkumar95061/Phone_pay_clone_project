@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UPI Payment UI</title>
+  <link rel="stylesheet" href="process.css">
+</head>
+<body>
+  <div class="container">
+    <div class="back-arrow"> Pay</div>
+    <div class="pay-box">
+      <div class="recipient">
+        <div class="avatar" id="avatar">RK</div>
+        <div class="recipient-info">
+          <input type="text" id="recipientName" value="Deep S" onfocus="goFullscreen()" oninput="updateAvatar()" />
+          <input type="text" id="upiId" value="paytmqrpp3xxkjp4v@paytm" />
+        </div>
+      </div>
+
+      <input type="text" class="amount-input" placeholder="₹ 0" value="₹ 0" />
+      <input type="text" class="message-box" placeholder="Add a message (optional)" />
+    </div>
+  </div>
+
+  <div class="pay-btn-container">
+    <button class="pay-btn" onclick="proceedToPay()">Proceed To Pay</button>
+  </div>
+
+  <!-- ✅ Success Audio -->
+  <audio id="successTune" preload="auto">
+    <source src="./img/paysuccess.mpeg" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script src="process.js"></script>
+</body>
+</html>
